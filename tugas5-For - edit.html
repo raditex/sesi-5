@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 5 For</title>
+</head>
+<body>
+    
+    <h1>Cetak Perulangan For</h1><br>
+
+    <label for="teks">Masukkan teks: </label>
+    <input type="text" id="teks" /> <br/>
+    <label for="jumlah">Masukkan jumlah: </label>
+    <input type="number" id="jumlah" /> <br/><br/>
+
+    <button onclick="cetak()">Cetak</button>
+    <div id="hasil"></div>
+        
+    <script>        
+                
+        function cetak(){
+            // const hasil = document.getElementById('hasil');
+            // let tampung = '<ol>';
+            // for (let i = 0; i < jumlah; i++) {
+            //     tampung = tampung + '<li>' + text + '</li>';   
+            // }
+            // tampung = tampung + '</ol>';                
+            // hasil.innerHTML = tampung;
+            let teks = document.getElementById('teks').value;
+            let jumlah = document.getElementById('jumlah').value;
+            let hasil = '';
+            let tampung = '<ol>';
+            for (let i = 0; i < jumlah; i++) {
+                tampung = tampung + '<li>' + teks + '</li>';   
+            }
+            tampung = tampung + '</ol>';
+            document.getElementById('hasil').innerHTML = tampung;
+
+        }
+    </script>    
+
+</body>
+</html>
